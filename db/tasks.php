@@ -25,9 +25,15 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'Webhook Data';
-$string['discussioncreate'] = 'Discussion Created';
-$string['quizcreate'] = 'Quiz Created';
-$string['assignmentcreate'] = 'Assignment Created';
-$string['quizsubmit'] = 'Quiz Submitted';
-$string['assignmentsubmit'] = 'Assignment Submitted';
+$tasks = [
+    [
+        'classname' => 'local_webhookdata\task\discussioncreatenoti_task',
+        'blocking' => 0,
+        'minute' => 2,
+        'hour' => '*',
+        'day' => '*',
+        'month' => '*',
+        'dayofweek' => '*',
+        'disabled' => 1
+    ]
+];
